@@ -1,38 +1,71 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  margin-top: 4vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.light-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+}
+.light-container {
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  height: 60vh;
+  width: 30vh;
+  margin: 8vh;
+  display: flex;
+  flex-flow: column;
 }
 
-.App-link {
-  color: #61dafb;
+.light-frame {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  margin: 2vh;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/* when the light is dim, background color gets darker to make it distinguishable */
+.light-frame.dim {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: lightgrey;
+  margin: 2vh;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* when the light is lit, color changes */
+.light-red {
+  background-color: darkred;
+  border-style: hidden;
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+}
+
+.light-red.lit {
+  background-color: red;
+}
+
+.light-green {
+  background-color: darkgreen;
+  border-style: hidden;
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+}
+
+.light-green.lit {
+  background-color: lightgreen;
 }
