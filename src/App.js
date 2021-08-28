@@ -20,30 +20,23 @@ const Lights = (props) => {
     <div className="light-row">
       <div className="light-container">
         {/* conditional styling */}
-        <div className={`light-frame ${props.state ? "" : "dim"}`}>
-          <div className={`light-red ${props.state ? "lit" : ""}`}></div>
-        </div>
-        <div className={`light-frame ${props.state ? "dim" : ""}`}>
-          <div className={`light-green ${props.state ? "" : "lit"}`}></div>
-        </div>
+        <div className={`light-red ${props.state ? "lit" : ""}`}></div>
+        <div className={`light-green ${props.state ? "" : "lit"}`}></div>
       </div>
       <div className="light-container">
-        <div className={`light-frame ${props.state ? "dim" : ""}`}>
-          <div className={`light-red ${props.state ? "" : "lit"}`}></div>
-        </div>
-
-        <div className={`light-frame ${props.state ? "" : "dim"}`}>
-          <div className={`light-green ${props.state ? "lit" : ""}`}></div>
-        </div>
+        <div className={`light-red ${props.state ? "" : "lit"}`}></div>
+        <div className={`light-green ${props.state ? "lit" : ""}`}></div>
       </div>
     </div>
   );
 };
 
 const SwapButton = (props) => {
+  //function to swap colors
   const swapColors = () => {
-    props.state ? props.swapColors(false) : props.swapColors(true);
+    props.state ? props.setState(false) : props.setState(true);
   };
+
   return (
     <div>
       <Button color="danger" onClick={() => swapColors()}>

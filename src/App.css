@@ -13,47 +13,30 @@
 }
 .light-container {
   border-style: solid;
-  border-width: 5px;
+  border-width: 4px;
+  border-radius: 10px;
   border-color: black;
-  background-color: darkgrey;
+  background-color: #333;
   height: 60vh;
   width: 30vh;
   margin: 8vh;
   display: flex;
-  flex-flow: column;
-}
-
-.light-frame {
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
-  background-color: white;
-  margin: 2vh;
-  height: 50%;
-  justify-content: center;
   align-items: center;
-  display: flex;
-}
-/* when the light is dim, background color gets darker to make it distinguishable */
-.light-frame.dim {
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
-  background-color: lightgrey;
-  margin: 2vh;
-  height: 50%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 /* when the light is lit, color changes */
 .light-red {
-  background-color: darkred;
+  background-image: radial-gradient(brown, transparent);
   border-style: hidden;
   border-radius: 50%;
-  height: 80%;
-  width: 80%;
+  height: 30%;
+  width: 30%;
+  padding: 10vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .light-red.lit {
@@ -61,13 +44,17 @@
 }
 
 .light-green {
-  background-color: darkgreen;
+  background-image: radial-gradient(rgb(2, 175, 2), transparent);
   border-style: hidden;
   border-radius: 50%;
-  height: 80%;
-  width: 80%;
+  height: 30%;
+  width: 30%;
+  padding: 10vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .light-green.lit {
-  background-color: lightgreen;
+  background-color: lime;
 }
