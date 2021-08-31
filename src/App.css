@@ -35,12 +35,12 @@
   width: 30%;
   padding: 10vh;
   justify-content: center;
-  align-items: center;
   display: flex;
 }
 
 .light-red.lit {
   background-color: red;
+  box-shadow: 0 0 20px #111 inset, 0 0 10px red;
 }
 
 .light-green {
@@ -51,10 +51,10 @@
   width: 30%;
   padding: 10vh;
   justify-content: center;
-  align-items: center;
   display: flex;
 }
 
 .light-green.lit {
   background-color: lime;
+  box-shadow: 0 0 20px #111 inset, 0 0 10px green;
 }

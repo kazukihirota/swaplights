@@ -3,14 +3,14 @@ import { Button } from "reactstrap";
 import "./App.css";
 
 function App() {
-  //defining the state of light (0 or 1)
+  //defining the state of light
   const [isRightGreenLit, setIsRightGreenLit] = useState(true);
 
   return (
     <div className="App">
       <h1 className="header">Swap lights</h1>
       <Lights state={isRightGreenLit} />
-      <SwapButton state={isRightGreenLit} setState={setIsRightGreenLit} />
+      <SwapColorButton state={isRightGreenLit} setState={setIsRightGreenLit} />
     </div>
   );
 }
@@ -31,7 +31,7 @@ const Lights = (props) => {
   );
 };
 
-const SwapButton = (props) => {
+const SwapColorButton = (props) => {
   //function to swap colors
   const swapColors = () => {
     props.state ? props.setState(false) : props.setState(true);
